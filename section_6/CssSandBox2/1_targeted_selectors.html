@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Targeted Selectors</title>
+    <style>
+      /* Direct Child */
+      div p {
+        background-color: #ddd;
+      }
+
+      /* Directly after/Sibling*/
+      /* Mark up will be <div> Content </div> <p> Content </p> */
+      /* Where the paragraph will be styled */
+      div + p {
+        background-color: #000;
+        color: #fff;
+      }
+
+      /* By target attribute */
+      a[target]{
+        background: #ff0000;
+        color: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="">
+      <p>Lorem ipsum dolor sit amet.</p>
+
+      <ul>
+        <li>Item 1</li>
+        <li>
+          <p>
+            Item 2
+          </p>
+        </li>
+        <li>Item 3</li>
+      </ul>
+
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet.</p>
+    <a href="#">Page 1</a> <a href="#">Page 2</a> <a href="www.google.com" target="_blank">Google</a>
+  </body>
+</html>
